@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/b.css">
+    <title>LokalBrothers</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script type="text/javascript" src="Chart.js"></script>
+
+
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo">LOKAL BROTHERS</a>
+    <nav class="navigation">
+        <a href="#Thema">Überblick</a>
+        <a href="#Statistics">Statistiken</a>
+        <a href="#Kontakt">Kontakt</a>
+    </nav>
+</header>
+
+
+<section class="main">
+    <img src="" alt="">
+</section>
+
+
+<section class="Thema" id="Thema">
+    <div>
+        <h2 class="title">Überblick</h2>
+    </div>
+    <div class="parag">
+        <img src="static/Openstreetmap_logo.svg.png">
+            <p>
+                Willkommen bei Lokal Brothers! Hier können Sie nach einer Vielzahl von Gastronomiebetrieben
+                in Ihrer Umgebung suchen, indem Sie einfach Ihre Postleitzahl eingeben. Egal, ob Sie auf der Suche nach
+                einem schnellen Imbiss oder einem ausgefallenen Lokal sind, wir haben das Richtige für Sie.
+
+                Sie können nicht nur nach Betrieben suchen, sondern auch Bewertungen hinterlassen und welche von
+                anderen Nutzern lesen. Auf diese Weise können Sie herausfinden, was andere Nutzer von einem bestimmten
+                Betrieb halten, und Sie können sich besser informieren, wo Sie essen gehen möchten. Wenn
+                Sie also auf der Suche nach neuen Lokalen sind oder einfach nur Ihre Meinung über ein besuchtes
+                Lokal mitteilen möchten, ist unsere Website der perfekte Ort dafür.
+
+
+            </p>
+
+        </div>
+    </div>
+
+
+</section>
+
+
+<section class="Statistics" id="Statistics">
+    <div class="margin-top">
+        <h2 class="title">Statistiken</h2>
+
+    </div>
+
+
+    <div>
+        <h3 class="graph"> Geben Sie eine Postleitzahl ein </h3>
+        <div class="search_box">
+            <label for="restaurant-name-input"></label>
+            <input class="input_box" type="text" id="restaurant-name-input" name="restaurant-name-input"
+                   placeholder="Suche">
+            <a class="btn" href="javascript:void(0);" type="button" id="search-button">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+
+
+        <div class="margin-top">
+            <!--h3 class="graph"> Graph1</h3-->
+            <div class="outbox">
+                <div style="width:50%" class="container">
+                    <canvas id="myChart" width="450" height="450"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+
+        <div class="review-box">
+            <br>
+            <h1 class="review-text">
+                Geben Sie den Namen eines Lokals ein,<br> dass sie bewerten möchten
+
+            </h1>
+            <!-- Create a form for entering a review -->
+            <!-- Create a text field for the amenity name -->
+            <input id="amenity-name" type="text" placeholder="Lokal Name">
+            <!--select id="recommendations"></select-->
+            <!-- Create a text field for the review -->
+
+            <label for="review">Review:</label><br>
+            <br>
+            <h1 class="review-text">
+                Geben Sie Ihre Bewertung ein
+
+            </h1>
+            <textarea id="review" name="review"></textarea><br>
+            <!-- Create a submit button -->
+            <input type="submit" value="Absenden" id="submit-review">
+        </div>
+
+        <div class="review-table scrollable max-height-500">
+            <table>
+                <thead>
+                <tr class="spalten-namen">
+                    <th>Amenity Name</th>
+                    <th>Amenity type</th>
+                    <th>Reviews</th>
+                </tr>
+                </thead>
+                <tbody id="review-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="Kontakt1" id="Kontakt">
+    <div>
+        <h2 class="title">Kontakt</h2>
+    </div>
+    <div class="content">
+
+        <div class="card">
+            <a href="https://www.zhaw.ch/de/engineering/">
+                <div class="icon">
+                    <i class="fas fa-building"></i>
+                </div>
+            </a>
+            <div class="info">
+                <h3>Institution</h3>
+                <p>ZHAW School of Engineering</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info">
+                <h3>Email</h3>
+                <p>roccinev@students.zhaw.ch</p>
+                <p>loukibad@students.zhaw.ch</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<footer class="footer">
+    <p class="footer-title">Copyrights @ <span>LOKAL BROTHERS</span></p>
+    <div class="social-icons">
+        <a href="https://www.zhaw.ch/de/engineering/">
+            <img src="static/Logo+ZHAW.png" alt="ZHAW" height="50" width="50">
+        </a>
+    </div>
+</footer>
+
+
+<script src="/static/Javascript/index.js"></script>
+<script src="/static/Javascript/review.js"></script>
+<script src="/static/Javascript/reviewTable.js"></script>
+</body>
+</html>
